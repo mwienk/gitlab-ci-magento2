@@ -24,6 +24,7 @@ RUN docker-php-ext-configure \
     gd --with-jpeg-dir=/usr/include/
 
 RUN docker-php-ext-install \
+    bcmath \
     gd \
     bz2 \
     intl \

@@ -13,7 +13,7 @@ RUN apt-get update && \
     libicu-dev \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
-    libpng12-dev \
+    libpng-dev \
     libxslt1-dev \
     libxml2-dev \
     libgd2-xpm-dev && \
@@ -24,6 +24,7 @@ RUN docker-php-ext-configure \
     gd --with-jpeg-dir=/usr/include/
 
 RUN docker-php-ext-install \
+    bcmath \
     gd \
     bz2 \
     intl \
